@@ -1,4 +1,6 @@
 import { FloatingPetals } from "../ui/BackgroundAnimations";
+import foto8 from '../../assets/foto8.jpg';
+import foto7 from '../../assets/foto7.jpg';
 
 export default function Couple() {
   return (

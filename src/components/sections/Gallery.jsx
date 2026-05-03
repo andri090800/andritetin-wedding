@@ -8,12 +8,12 @@ import gallery6 from '../../assets/gallery6.jpg';
 
 export default function Gallery() {
   const images = [
-    "/src/assets/gallery1.jpg",
-    "/src/assets/gallery2.jpg",
-    "/src/assets/gallery3.jpg",
-    "/src/assets/gallery4.jpg",
-    "/src/assets/gallery5.jpg",
-    "/src/assets/gallery6.jpg",
+   gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
   ];
 
   return (

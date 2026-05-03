@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wedding-gold: #D4AF37;
+  --color-wedding-gold-light: #F3E5AB;
+  --color-wedding-sage: #9DC183;
+  --color-wedding-dark: #2C2C2C;
+  --color-wedding-bg: #FAF9F6;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Lora", sans-serif;
+  
+  --animate-twinkle: twinkle 3s ease-in-out infinite;
+  --animate-float: float 15s linear infinite;
+  --animate-drift: drift 8s ease-in-out infinite;
+  --animate-bokeh: bokeh 20s ease-in-out infinite;
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.4; }
+    90% { opacity: 0.4; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+
+  @keyframes drift {
+    0%, 100% { transform: translate(0, 0); opacity: 0; }
+    50% { transform: translate(20px, -20px); opacity: 0.6; }
+  }
+
+  @keyframes bokeh {
+    0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.05; }
+    50% { transform: scale(1.5) translate(30px, -30px); opacity: 0.15; }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-wedding-bg text-wedding-dark font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  .gold-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-wedding-gold to-yellow-600;
+  }
+  
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-wedding-gold-light);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-wedding-gold);
+  }
+}

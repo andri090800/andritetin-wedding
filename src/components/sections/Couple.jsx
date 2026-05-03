@@ -18,7 +18,7 @@ export default function Couple() {
           <Card 
             name="Andri Mulyana, S.Kom"
             desc="Putra dari Bpk. Hermin & Ibu Tati"
-            img="/src/assets/foto8.jpg"
+            img={foto8}
           />
 
           <div className="text-4xl sm:text-5xl font-serif text-[#D4AF37]/50 drop-shadow-md">
@@ -28,7 +28,7 @@ export default function Couple() {
           <Card 
             name="Tetin Tresnawati, S.KM"
             desc="Putri dari Bpk. Tatang & Ibu Sukanah"
-            img="/src/assets/foto7.jpg"
+            img={foto7}
           />
         </div>
       </div>
